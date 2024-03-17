@@ -4,6 +4,6 @@ sidebar_position: 1
 ---
 
 :::info
-ここはプログラミングのトップページです。
-ドキュメントについてとか、プログラミング関係の記事はこの下に追加予定。
+Here is the top page of programming.
+Articles about documentation and other programming-related topics will be added below this page.
 :::

@@ -4,6 +4,6 @@ sidebar_position: 1
 ---
 
 :::info
-ここはAppのトップページです。<br />
-アプリに関する情報を記載しています。
+This is the top page of the App.<br />
+This section contains information about the application.
 :::

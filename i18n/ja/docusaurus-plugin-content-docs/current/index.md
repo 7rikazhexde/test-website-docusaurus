@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # Introduction
 
-Top Page.
+Topページです。
 
 ## [Tutorial](./tutorial/index.md)
 

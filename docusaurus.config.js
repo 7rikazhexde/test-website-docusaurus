@@ -9,7 +9,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Test Website Docusaurus',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'Welcome to my website',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -32,7 +32,7 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en','ja'],
   },
 
   presets: [
@@ -82,6 +82,7 @@ const config = {
           //  label: 'Tutorial',
           //},
           //{to: '/blog', label: 'Blog', position: 'left'},
+          {type: 'localeDropdown',position: 'right'},
           {
             to: '/tutorial',
             type: 'docSidebar',

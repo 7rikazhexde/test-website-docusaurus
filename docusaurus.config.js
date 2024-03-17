@@ -8,7 +8,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
+  title: 'Test Website Docusaurus',
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
@@ -69,7 +69,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'Home',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -104,7 +104,7 @@ const config = {
             label: 'Sample',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/7rikazhexde/test-website-docusaurus',
             label: 'GitHub',
             position: 'right',
           },

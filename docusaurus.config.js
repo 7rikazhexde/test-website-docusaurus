@@ -17,6 +17,7 @@ const config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/test-website-docusaurus/',
+  //baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -41,7 +42,7 @@ const config = {
       ({
         docs: {
           // docs以下のindex.mdを表示する場合はrouteBasePathを指定する
-          routeBasePath: '/',
+          //routeBasePath: '/',
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -121,11 +122,11 @@ const config = {
               },
               {
                 label: 'App',
-                to: '/docs/app',
+                to: '/docs/app/',
               },
               {
                 label: 'Sample',
-                to: '/docs/sample',
+                to: '/docs/sample/',
               },
             ],
           },

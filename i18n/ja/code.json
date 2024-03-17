@@ -1,0 +1,27 @@
+{
+  "homepage.title": {
+    "message": "テストウェブサイト Docusaurus"
+  },
+  "homepage.tagline": {
+    "message": "私のウェブサイトへようこそ"
+  },
+  "homepage.features.easy.title": {
+    "message": "簡単に使える"
+  },
+  "homepage.features.easy.description": {
+    "message": "Docusaurusは、簡単にインストールでき、すぐにWebサイトを立ち上げることができるよう設計されています。"
+  },
+  "homepage.features.focus.title": {
+    "message": "本質的なことに集中"
+  },
+  "homepage.features.focus.description": {
+    "message": "Docusaurusであれば、ドキュメントに集中できます。ドキュメントを<code>docs</code>ディレクトリに移動するだけです。"
+  },
+  "homepage.features.react.title": {
+    "message": "Reactで構築"
+  },
+  "homepage.features.react.description": {
+    "message": "ReactをそのВ#&112;Вдвћвђиж€これにより、ヘッダーやフッターは共通化されながらもカスタマイズが可能です。"
+  }
+}
+

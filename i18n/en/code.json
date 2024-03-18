@@ -1,0 +1,26 @@
+{
+  "homepage.title": {
+    "message": "Test Website Docusaurus"
+  },
+  "homepage.tagline": {
+    "message": "Welcome to my website"
+  },
+  "homepage.features.easy.title": {
+    "message": "Easy to Use"
+  },
+  "homepage.features.easy.description": {
+    "message": "{docusaurus} was designed from the ground up to be easily installed and used to get your website up and running quickly."
+  },
+  "homepage.features.focus.title": {
+    "message": "Focus on What Matters"
+  },
+  "homepage.features.focus.description": {
+    "message": "{docusaurus} lets you focus on your docs, and we'll do the chores. Go ahead and move your {docDir} into the code directory."
+  },
+  "homepage.features.react.title": {
+    "message": "Powered by React"
+  },
+  "homepage.features.react.description": {
+    "message": "Extend or customize your website layout by reusing React. {docusaurus} can be extended while reusing the same header and footer."
+  }
+}

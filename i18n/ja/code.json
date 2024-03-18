@@ -9,19 +9,18 @@
     "message": "簡単に使える"
   },
   "homepage.features.easy.description": {
-    "message": "Docusaurusは、簡単にインストールでき、すぐにWebサイトを立ち上げることができるよう設計されています。"
+    "message": "{docusaurus}は、簡単にインストールでき、すぐにWebサイトを立ち上げることができるよう設計されています。"
   },
   "homepage.features.focus.title": {
     "message": "本質的なことに集中"
   },
   "homepage.features.focus.description": {
-    "message": "Docusaurusであれば、ドキュメントに集中できます。ドキュメントを<code>docs</code>ディレクトリに移動するだけです。"
+    "message": "{docusaurus}であれば、ドキュメントに集中できます。ドキュメントを{docDir}ディレクトリに移動するだけです。"
   },
   "homepage.features.react.title": {
     "message": "Reactで構築"
   },
   "homepage.features.react.description": {
-    "message": "ReactをそのВ#&112;Вдвћвђиж€これにより、ヘッダーやフッターは共通化されながらもカスタマイズが可能です。"
+    "message": "React を再利用してウェブサイトのレイアウトを拡張またはカスタマイズします。{docusaurus} は、同じヘッダーとフッターを再利用しながら拡張することができます。"
   }
 }
-

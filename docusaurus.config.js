@@ -32,7 +32,7 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en','ja'],
+    locales: ['en','ja']
   },
 
   presets: [
@@ -49,13 +49,13 @@ const config = {
           editUrl:
             'https://github.com/7rikazhexde/test-website-docusaurus/edit/main',
         },
-        //blog: {
-        //  showReadingTime: true,
-        //  // Please change this to your repo.
-        //  // Remove this to remove the "edit this page" links.
-        //  editUrl:
-        //    'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        //},
+        blog: {
+          showReadingTime: true,
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
+          editUrl:
+            'https://github.com/7rikazhexde/test-website-docusaurus/edit/main',
+        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -75,13 +75,7 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
-          //{
-          //  type: 'docSidebar',
-          //  sidebarId: 'tutorialSidebar',
-          //  position: 'left',
-          //  label: 'Tutorial',
-          //},
-          //{to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blog', label: 'Blog', position: 'left'},
           {type: 'localeDropdown',position: 'right'},
           {
             to: '/tutorial',
@@ -131,32 +125,22 @@ const config = {
               },
             ],
           },
-          /*
           {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'X(Twitter)',
+                href: 'https://twitter.com/tw_7rikazhexde',
               },
             ],
           },
-          */
           {
             title: 'More',
             items: [
-              //{
-              //  label: 'Blog',
-              //  to: '/blog',
-              //},
+              {
+                label: 'Blog',
+                to: '/blog',
+              },
               {
                 label: 'GitHub',
                 href: 'https://github.com/7rikazhexde/test-website-docusaurus',

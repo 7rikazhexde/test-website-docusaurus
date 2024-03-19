@@ -41,7 +41,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          // docs以下のindex.mdを表示する場合はrouteBasePathを指定する
+          // docs/index.mdをTopページにする場合にコメントアウトを外すこと。
           //routeBasePath: '/',
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
@@ -68,6 +68,11 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
+      algolia: {
+        apiKey: "1cb27ffce8a90815b6f5f27dfcca0ccc",
+        indexName: "7rikazhexdeio",
+        appId: "HKZT8IAQZ3",
+      },
       navbar: {
         title: 'Home',
         logo: {
@@ -113,15 +118,27 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
+                //src/pages/index.jsをTopページにする場合
                 to: '/docs/tutorial/intro',
+                //docs/index.mdをTopページにする場合
+                //src/pages/index.jsをsrc/pages/index.js0にすること。
+                //to: '/tutorial/intro',
               },
               {
                 label: 'App',
+                // src/pages/index.jsをTopページにする場合
                 to: '/docs/app/',
+                // docs/index.mdをTopページにする場合
+                // src/pages/index.jsをsrc/pages/index.js0にすること。
+                //to: '/app',
               },
               {
                 label: 'Sample',
+                // src/pages/index.jsをTopページにする場合
                 to: '/docs/sample/',
+                // docs/index.mdをTopページにする場合
+                // src/pages/index.jsをsrc/pages/index.js0にすること。
+                //to: '/sample',
               },
             ],
           },
@@ -148,7 +165,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} 7rikazhexde. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,

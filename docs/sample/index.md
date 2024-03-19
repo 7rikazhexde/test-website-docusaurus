@@ -1,4 +1,5 @@
 ---
+slug: /sample
 sidebar_position: 1
 ---
 

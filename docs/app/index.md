@@ -1,4 +1,5 @@
 ---
+slug: /app
 title: App Top
 sidebar_position: 1
 ---

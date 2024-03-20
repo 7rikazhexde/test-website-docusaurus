@@ -2,6 +2,12 @@
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
+## URL
+
+Content(website) is managed by GitHub Pages.
+
+[https://7rikazhexde.github.io/test-website-docusaurus/](https://7rikazhexde.github.io/test-website-docusaurus/)
+
 ## Installation
 
 ```bash

@@ -79,12 +79,14 @@ export default function Root({ children }) {
           //console.log('allowGtag cookie before:', Cookies.get('allowGtag'));
           Cookies.set('allowGtag', 'true', { expires: 365 });
           //console.log('allowGtag cookie after:', Cookies.get('allowGtag'));
+          window.location.reload();
         }}
         onDecline={() => {
           //console.log('onDecline handler called');
           //console.log('allowGtag cookie before:', Cookies.get('allowGtag'));
           Cookies.set('allowGtag', 'false', { expires: 365 });
           //console.log('allowGtag cookie after:', Cookies.get('allowGtag'));
+          window.location.reload();
         }}
       >
         {texts.consentText}

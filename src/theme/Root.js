@@ -4,7 +4,10 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 const containerStyle = {
   background: "#bbdbf3",
-  color: "black"
+  color: "black",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center"
 }
 
 const buttonStyle = {
@@ -37,9 +40,9 @@ const localeTexts = {
   ja: {
     consentText: (
       <span>
-        このサイトは利便性向上のためGoogle Analytics (GA4)を使用しています。
-        (<a href="https://7rikazhexde.github.io/test-website-docusaurus/ja/docs/about" style={linkStyle}>詳細</a>)
-        同意するか拒否するかを選択してください。
+        このサイトは、利便性を向上させるためにCookieを使用し、Google Analytics (GA4)を活用しています。
+        (<a href="https://7rikazhexde.github.io/test-website-docusaurus/ja/docs/about" style={linkStyle}>詳細</a>)<br />
+        Cookieの使用について、同意するか拒否するかを選択してください。
       </span>
     ),
     buttonText: '同意する',
@@ -48,9 +51,9 @@ const localeTexts = {
   en: {
     consentText: (
       <span>
-        This site uses Google Analytics (GA4) to improve the user convenience.
-        (<a href="https://7rikazhexde.github.io/test-website-docusaurus/docs/about" style={linkStyle}>detail</a>)
-        Please choose whether you Agree or Decline.
+        This site uses cookies and utilizes Google Analytics (GA4) to enhance convenience. 
+        (<a href="https://7rikazhexde.github.io/test-website-docusaurus/docs/about" style={linkStyle}>detail</a>)<br />
+        Please select whether you agree or decline the use of cookies.
       </span>
     ),
     buttonText: 'Agree',

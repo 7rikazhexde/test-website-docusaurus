@@ -27,16 +27,12 @@
     "message": "X(Twitter)",
     "description": "The label of footer link with label=X(Twitter) linking to https://twitter.com/tw_7rikazhexde"
   },
-  "link.item.label.Blog": {
-    "message": "Blog",
-    "description": "The label of footer link with label=Blog linking to /blog"
-  },
-  "link.item.label.GitHub": {
-    "message": "GitHub",
-    "description": "The label of footer link with label=GitHub linking to https://github.com/7rikazhexde/test-website-docusaurus"
-  },
   "copyright": {
     "message": "Copyright © 2024 7rikazhexde Built with Docusaurus.",
     "description": "The footer copyright"
+  },
+  "link.item.label.About": {
+    "message": "About this site",
+    "description": "The label of footer link with label=About linking to /docs/about"
   }
 }

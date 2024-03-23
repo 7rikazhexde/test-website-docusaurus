@@ -66,7 +66,7 @@ export default function Root({ children }) {
   return (
     <div>
       <CookieConsent
-        debug={true}
+        //debug={true}
         location="bottom"
         buttonText={texts.buttonText}
         declineButtonText={texts.declineButtonText}

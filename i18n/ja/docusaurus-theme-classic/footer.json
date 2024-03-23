@@ -23,14 +23,6 @@
     "message": "その他",
     "description": "The title of the footer links column with title=More in the footer"
   },
-  "link.item.label.Blog": {
-    "message": "ブログ",
-    "description": "The label of footer link with label=Blog linking to /blog"
-  },
-  "link.item.label.GitHub": {
-    "message": "ギットハブ",
-    "description": "The label of footer link with label=GitHub linking to https://github.com/7rikazhexde/test-website-docusaurus"
-  },
   "link.item.label.X(Twitter)": {
     "message": "X(Twitter)",
     "description": "The label of footer link with label=X(Twitter) linking to https://twitter.com/tw_7rikazhexde"
@@ -38,5 +30,9 @@
   "copyright": {
     "message": "Copyright © 2024 7rikazhexde Built with Docusaurus.",
     "description": "The footer copyright"
+  },
+  "link.item.label.About": {
+    "message": "このサイトについて",
+    "description": "The label of footer link with label=About linking to /docs/about"
   }
 }

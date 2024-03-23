@@ -32,14 +32,25 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en','ja']
+    locales: ['en','ja'],
   },
+
+  plugins: [
+    [
+      './src/plugins/gtag-plugin.js',
+      {
+        trackingID: 'G-QH99K0ZNM4',
+        anonymizeIP: true,
+      },
+    ],
+  ],
 
   presets: [
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
+      //https://docusaurus.io/docs/using-plugins#docusauruspreset-classic
         docs: {
           // docs/index.mdをTopページにする場合にコメントアウトを外すこと。
           //routeBasePath: '/',
@@ -154,14 +165,22 @@ const config = {
           {
             title: 'More',
             items: [
+              //{
+              //  label: 'Blog',
+              //  to: '/blog',
+              //},
+              //{
+              //  label: 'GitHub',
+              //  href: 'https://github.com/7rikazhexde/test-website-docusaurus',
+              //},
               {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/7rikazhexde/test-website-docusaurus',
-              },
+                label: 'About',
+                // src/pages/index.jsをTopページにする場合
+                to: '/docs/about',
+                // docs/index.mdをTopページにする場合
+                // src/pages/index.jsをsrc/pages/index.js0にすること。
+                //to: '/about',
+              }
             ],
           },
         ],

@@ -1,5 +1,5 @@
 ---
-slug: /tutolial
+slug: /tutorial
 title: Tutorial Top
 sidebar_position: 1
 ---

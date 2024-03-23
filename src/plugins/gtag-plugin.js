@@ -1,83 +1,32 @@
-/*
 const { Cookies } = require('react-cookie-consent');
-
-module.exports = function (context, options) {
-  const isGtagEnabled = Cookies.get('allowGtag') === 'true';
-  //console.log('isGtagEnabled',isGtagEnabled)
-  //console.log('trackingID',options.trackingID)
-
-  return {
-    name: 'custom-gtag-plugin',
-    injectHtmlTags() {
-      if (isGtagEnabled) {
-        return {
-          headTags: [
-            {
-              tagName: 'script',
-              attributes: {
-                async: true,
-                src: `https://www.googletagmanager.com/gtag/js?id=${options.trackingID}`,
-              },
-            },
-            {
-              tagName: 'script',
-              innerHTML: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${options.trackingID}', {
-                  anonymize_ip: ${options.anonymizeIP}
-                });
-              `,
-            },
-          ],
-        };
-      } else {
-        return {};
-      }
-    },
-  };
-};
-*/
-
-const { Cookies } = require('react-cookie-consent');
+const fs = require('fs');
+const path = require('path');
 
 module.exports = function(context, options) {
   const isGtagEnabled = Cookies.get('allowGtag') === 'true';
 
   return {
     name: 'custom-gtag-plugin',
-    injectHtmlTags() {
-      const gtmScript = isGtagEnabled
-        ? {
-            tagName: 'script',
-            innerHTML: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              window.onload = function() {
-                gtag('js', new Date());
-                gtag('config', '${options.trackingID}', { anonymize_ip: ${options.anonymizeIP} });
-              }
-            `,
-          }
-        : null;
+    postBuild(props) {
+      const { outDir } = props;
+      const htmlFilePath = path.join(outDir, 'index.html');
+      let htmlContent = fs.readFileSync(htmlFilePath, 'utf8');
 
-      if (isGtagEnabled) {
-        return {
-          headTags: [
-            {
-              tagName: 'script',
-              attributes: {
-                async: true,
-                src: `https://www.googletagmanager.com/gtag/js?id=${options.trackingID}`,
-              },
-            },
-            gtmScript,
-          ],
-        };
-      } else {
-        return {};
-      }
+      // gtag.jsの読み込みスクリプト
+      const gtagScript = `<script async src="https://www.googletagmanager.com/gtag/js?id=${options.trackingID}"></script>`;
+
+      // gtag関数の実行スクリプト
+      const gtmScript = isGtagEnabled ? `
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${options.trackingID}', { anonymize_ip: ${options.anonymizeIP} });
+        </script>
+      ` : '';
+
+      htmlContent = htmlContent.replace('</head>', `${gtagScript}\n${gtmScript}</head>`);
+      fs.writeFileSync(htmlFilePath, htmlContent);
     },
   };
 };

@@ -44,6 +44,13 @@ const config = {
         anonymizeIP: true,
       },
     ],
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        indexDocs: true,
+        language: ["en","ja"],
+      },
+    ],
   ],
 
   presets: [
@@ -80,11 +87,13 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
-      algolia: {
-        appId: "HKZT8IAQZ3",
-        apiKey: "cdedb2939b89a33cc9d13643626c24f6",
-        indexName: "7rikazhexdeio",
-      },
+      //algolia: {
+      //  appId: "HKZT8IAQZ3",
+      //  apiKey: "e9b123efad28de7c0e4d7b46f4599877",
+      //  indexName: "7rikazhexdeio",
+      //  contextualSearch: true,
+      //  searchParameters: {},
+      //},
       navbar: {
         title: 'Home',
         logo: {

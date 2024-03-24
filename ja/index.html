@@ -10,15 +10,20 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QH99K0ZNM4"></script>
 
         <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
 
-          // クッキーの値に基づいてGAの設定を行う
-          const isGtagEnabled = document.cookie.includes('allowGtag=true');
-          if (isGtagEnabled) {
-            gtag('config', 'G-QH99K0ZNM4', { anonymize_ip: true });
-          }
+        // クッキーの値に基づいてGAの設定を行う
+        const isGtagEnabled = document.cookie.includes('allowGtag=true');
+        if (isGtagEnabled) {
+          console.log('isGtagEnabled:',isGtagEnabled)
+          gtag('js', new Date());
+          gtag('config', 'G-QH99K0ZNM4', { anonymize_ip: true });
+        } else {
+          console.log('isGtagEnabled:',isGtagEnabled)
+          // 'allowGtag=false' の場合、gtag関数を無効化する
+          gtag = function() {};
+        }
         </script>
       </head>
 <body class="navigation-with-keyboard">

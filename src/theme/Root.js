@@ -17,7 +17,8 @@ const buttonStyle = {
   backgroundColor: '#ffc107',
   color: 'black',
   width: '120px',
-  height: '40px'
+  height: '40px',
+  fontSize: '15px'
 }
 
 const allowButtonStyle = {

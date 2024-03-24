@@ -18,15 +18,20 @@ module.exports = function(context, options) {
       // gtag関数の実行スクリプト
       const gtmScript = `
         <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
 
-          // クッキーの値に基づいてGAの設定を行う
-          const isGtagEnabled = document.cookie.includes('allowGtag=true');
-          if (isGtagEnabled) {
-            gtag('config', '${options.trackingID}', { anonymize_ip: ${options.anonymizeIP} });
-          }
+        // クッキーの値に基づいてGAの設定を行う
+        const isGtagEnabled = document.cookie.includes('allowGtag=true');
+        if (isGtagEnabled) {
+          console.log('isGtagEnabled:',isGtagEnabled)
+          gtag('js', new Date());
+          gtag('config', '${options.trackingID}', { anonymize_ip: ${options.anonymizeIP} });
+        } else {
+          console.log('isGtagEnabled:',isGtagEnabled)
+          // 'allowGtag=false' の場合、gtag関数を無効化する
+          gtag = function() {};
+        }
         </script>
       `;
 

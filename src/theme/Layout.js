@@ -1,44 +1,44 @@
-/*
 import React, { useEffect } from 'react';
+import OriginalLayout from '@theme-original/Layout';
 import CookieConsent, { Cookies } from 'react-cookie-consent';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import { useLocation } from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 const containerStyle = {
-  background: "#bbdbf3",
-  color: "black",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center"
-}
-
-const buttonStyle = {
-  borderRadius: '4px',
-  fontWeight: 'bold',
-  cursor: 'pointer',
-  backgroundColor: '#ffc107',
-  color: 'black',
-  width: '120px',
-  height: '40px',
-  fontSize: '15px'
-}
-
-const allowButtonStyle = {
-  ...buttonStyle,
-  backgroundColor: '#2e8555',
-  color: 'white',
-  marginRight: '30px'
-}
-
-const linkStyle = {
-  color: 'blue',
-  textDecoration: 'underline'
-}
-
-const denyButtonStyle = {
-  ...buttonStyle,
-}
+    background: "#bbdbf3",
+    color: "black",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center"
+  }
+  
+  const buttonStyle = {
+    borderRadius: '4px',
+    fontWeight: 'bold',
+    cursor: 'pointer',
+    backgroundColor: '#ffc107',
+    color: 'black',
+    width: '120px',
+    height: '40px',
+    fontSize: '15px'
+  }
+  
+  const allowButtonStyle = {
+    ...buttonStyle,
+    backgroundColor: '#2e8555',
+    color: 'white',
+    marginRight: '30px'
+  }
+  
+  const linkStyle = {
+    color: 'blue',
+    textDecoration: 'underline'
+  }
+  
+  const denyButtonStyle = {
+    ...buttonStyle,
+  }
 
 const localeTexts = {
   ja: {
@@ -65,7 +65,7 @@ const localeTexts = {
   },
 };
 
-export default function Root({ children }) {
+export default function Layout(props) {
   const location = useLocation();
   const { i18n } = useDocusaurusContext();
   const currentLocale = i18n.currentLocale;
@@ -108,7 +108,7 @@ export default function Root({ children }) {
 
   return (
     <>
-      {children}
+      <OriginalLayout {...props} />
       <CookieConsent
         //debug={true}
         location="bottom"
@@ -125,11 +125,4 @@ export default function Root({ children }) {
       </CookieConsent>
     </>
   );
-}
-*/
-
-import React from 'react';
-
-export default function Root({ children }) {
-  return <>{children}</>;
 }

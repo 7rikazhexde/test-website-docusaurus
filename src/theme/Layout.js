@@ -59,7 +59,7 @@ export default function Layout(props) {
           <a
             href={
               isNetlifyProduction
-                ? "https://candid-wisp-54b5a8.netlify.app/ja/docs/about/"
+                ? "https://7rikazhexde-test-website-docusaurus.netlify.app/ja/docs/about/"
                 : "https://7rikazhexde.github.io/test-website-docusaurus/ja/docs/about"
             }
             style={linkStyle}
@@ -83,7 +83,7 @@ export default function Layout(props) {
           <a
             href={
               isNetlifyProduction
-                ? "https://candid-wisp-54b5a8.netlify.app/docs/about"
+                ? "https://7rikazhexde-test-website-docusaurus.netlify.app/docs/about"
                 : "https://7rikazhexde.github.io/test-website-docusaurus/docs/about"
             }
             style={linkStyle}

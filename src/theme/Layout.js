@@ -40,53 +40,64 @@ const denyButtonStyle = {
   ...buttonStyle,
 };
 
-const localeTexts = {
-  ja: {
-    consentText: (
-      <span>
-        このサイトは、利便性を向上させるためにCookieを使用し、Google Analytics
-        (GA4)を活用しています。
-        <br />
-        Cookieの使用について、同意するか拒否するかを選択してください。
-        詳細については、
-        <a
-          href="https://7rikazhexde.github.io/test-website-docusaurus/ja/docs/about"
-          style={linkStyle}
-        >
-          こちら
-        </a>
-        をご覧ください。
-      </span>
-    ),
-    buttonText: "同意する",
-    declineButtonText: "拒否する",
-  },
-  en: {
-    consentText: (
-      <span>
-        This site uses cookies and utilizes Google Analytics (GA4) to enhance
-        convenience.
-        <br />
-        Please select whether you agree or decline the use of cookies. For more
-        details, please see{" "}
-        <a
-          href="https://7rikazhexde.github.io/test-website-docusaurus/docs/about"
-          style={linkStyle}
-        >
-          here
-        </a>
-        .
-      </span>
-    ),
-    buttonText: "Agree",
-    declineButtonText: "Decline",
-  },
-};
-
 export default function Layout(props) {
   const location = useLocation();
-  const { i18n } = useDocusaurusContext();
+  const { i18n, siteConfig } = useDocusaurusContext();
+  const { customFields } = siteConfig;
+  const isNetlifyProduction = customFields.deploy;
   const currentLocale = i18n.currentLocale;
+
+  const localeTexts = {
+    ja: {
+      consentText: (
+        <span>
+          このサイトは、利便性を向上させるためにCookieを使用し、Google Analytics
+          (GA4)を活用しています。
+          <br />
+          Cookieの使用について、同意するか拒否するかを選択してください。
+          詳細については、
+          <a
+            href={
+              isNetlifyProduction
+                ? "https://candid-wisp-54b5a8.netlify.app/ja/docs/about/"
+                : "https://7rikazhexde.github.io/test-website-docusaurus/ja/docs/about"
+            }
+            style={linkStyle}
+          >
+            こちら
+          </a>
+          をご覧ください。
+        </span>
+      ),
+      buttonText: "同意する",
+      declineButtonText: "拒否する",
+    },
+    en: {
+      consentText: (
+        <span>
+          This site uses cookies and utilizes Google Analytics (GA4) to enhance
+          convenience.
+          <br />
+          Please select whether you agree or decline the use of cookies. For
+          more details, please see{" "}
+          <a
+            href={
+              isNetlifyProduction
+                ? "https://candid-wisp-54b5a8.netlify.app/docs/about"
+                : "https://7rikazhexde.github.io/test-website-docusaurus/docs/about"
+            }
+            style={linkStyle}
+          >
+            here
+          </a>
+          .
+        </span>
+      ),
+      buttonText: "Agree",
+      declineButtonText: "Decline",
+    },
+  };
+
   const texts = localeTexts[currentLocale] || localeTexts["en"];
 
   const handleAcceptCookie = () => {

@@ -36,6 +36,10 @@ const config = {
     locales: ['en','ja'],
   },
 
+  customFields: {
+    deploy: isNetlifyProduction,
+  },
+
   plugins: [
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),

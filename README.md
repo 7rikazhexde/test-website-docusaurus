@@ -1,12 +1,14 @@
-# Website
+# test-website-docusaurus
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Static sites generated using [Docusaurus](https://docusaurus.io/) for experimental purposes.
+
+[![Deploy to GitHub Pages](https://github.com/7rikazhexde/test-website-docusaurus/actions/workflows/deploy.yml/badge.svg)](https://github.com/7rikazhexde/test-website-docusaurus/actions/workflows/deploy.yml) [![Netlify Status](https://api.netlify.com/api/v1/badges/204140ba-737c-4135-b052-9dfcaff737a8/deploy-status)](https://app.netlify.com/sites/7rikazhexde-test-website-docusaurus/deploys)
 
 ## URL
 
-Content(website) is managed by GitHub Pages.
+Content(website) is managed by GitHub Pages and Netlify.
 
-[https://7rikazhexde.github.io/test-website-docusaurus/](https://7rikazhexde.github.io/test-website-docusaurus/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Visit-blue?style=for-the-badge&logo=github)](https://7rikazhexde.github.io/test-website-docusaurus/) [![Netlify](https://img.shields.io/badge/Netlify-Visit-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://test-website-docusaurus.netlify.app/)
 
 ## Installation
 

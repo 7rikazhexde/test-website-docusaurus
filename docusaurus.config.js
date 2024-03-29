@@ -6,6 +6,8 @@
 
 import {themes as prismThemes} from 'prism-react-renderer';
 
+const isNetlifyProduction = process.env.NETLIFY && process.env.CONTEXT === 'production';
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Test Website Docusaurus',
@@ -13,11 +15,10 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://7rikazhexde.github.io',
+  url: isNetlifyProduction ? 'https://{your-netlify-site-url}' : 'https://7rikazhexde.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/test-website-docusaurus/',
-  //baseUrl: '/',
+  baseUrl: isNetlifyProduction ? '/' : '/test-website-docusaurus/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -79,13 +80,6 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
-      //algolia: {
-      //  appId: "HKZT8IAQZ3",
-      //  apiKey: "e9b123efad28de7c0e4d7b46f4599877",
-      //  indexName: "7rikazhexdeio",
-      //  contextualSearch: true,
-      //  searchParameters: {},
-      //},
       navbar: {
         title: 'Home',
         logo: {
@@ -96,7 +90,7 @@ const config = {
           {to: '/blog', label: 'Blog', position: 'left'},
           {type: 'localeDropdown',position: 'right'},
           {
-            to: '/tutorial',
+            to: '/tutorial',  
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
@@ -105,7 +99,7 @@ const config = {
           {
             to: '/app',
             type: 'docSidebar',
-            sidebarId: 'appSidebar',
+            sidebarId: 'appSidebar',           
             position: 'left',
             label: 'App',
           },
@@ -137,7 +131,7 @@ const config = {
                 //src/pages/index.jsをsrc/pages/index.js0にすること。
                 //to: '/tutorial/intro',
               },
-              {
+              {  
                 label: 'App',
                 // src/pages/index.jsをTopページにする場合
                 to: '/docs/app/',
@@ -167,14 +161,6 @@ const config = {
           {
             title: 'More',
             items: [
-              //{
-              //  label: 'Blog',
-              //  to: '/blog',
-              //},
-              //{
-              //  label: 'GitHub',
-              //  href: 'https://github.com/7rikazhexde/test-website-docusaurus',
-              //},
               {
                 label: 'About',
                 // src/pages/index.jsをTopページにする場合

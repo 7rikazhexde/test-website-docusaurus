@@ -8,7 +8,7 @@ Static sites generated using [Docusaurus](https://docusaurus.io/) for experiment
 
 Content(website) is managed by GitHub Pages and Netlify.
 
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Visit-blue?style=for-the-badge&logo=github)](https://7rikazhexde.github.io/test-website-docusaurus/) [![Netlify](https://img.shields.io/badge/Netlify-Visit-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://test-website-docusaurus.netlify.app/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Visit-blue?style=for-the-badge&logo=github)](https://7rikazhexde.github.io/test-website-docusaurus/) [![Netlify](https://img.shields.io/badge/Netlify-Visit-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://7rikazhexde-test-website-docusaurus.netlify.app/)
 
 ## Installation
 

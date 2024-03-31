@@ -440,5 +440,21 @@
   "theme.SearchPage.fetchingNewResults": {
     "message": "新しい検索結果を取得しています...",
     "description": "The paragraph for fetching new search results"
+  },
+  "theme.docs.DocCard.categoryDescription.plurals": {
+    "message": "{count}項目",
+    "description": "The default description for a category card in the generated index about how many items this category includes"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "No results"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "See results outside {context}"
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "See all results in {context}"
+  },
+  "theme.SearchPage.searchContext.everywhere": {
+    "message": "everywhere"
   }
 }

@@ -40,12 +40,17 @@ const denyButtonStyle = {
   ...buttonStyle,
 };
 
+const githubTrackingId = "G-QH99K0ZNM4"; // GitHub Pagesでデプロイしたサイト用のGA4 ID
+const netlifyTrackingId = "G-XX9WKS2BWZ"; // Netlifyでデプロイしたサイト用のGA4 ID
+
 export default function Layout(props) {
   const location = useLocation();
   const { i18n, siteConfig } = useDocusaurusContext();
   const { customFields } = siteConfig;
   const isNetlifyProduction = customFields.deploy;
   const currentLocale = i18n.currentLocale;
+
+  const trackingId = isNetlifyProduction ? netlifyTrackingId : githubTrackingId;
 
   const localeTexts = {
     ja: {
@@ -59,7 +64,7 @@ export default function Layout(props) {
           <a
             href={
               isNetlifyProduction
-                ? "https://7rikazhexde-test-website-docusaurus.netlify.app/ja/docs/about/"
+                ? "https://test-website-docusaurus.netlify.app/ja/docs/about/"
                 : "https://7rikazhexde.github.io/test-website-docusaurus/ja/docs/about"
             }
             style={linkStyle}
@@ -83,7 +88,7 @@ export default function Layout(props) {
           <a
             href={
               isNetlifyProduction
-                ? "https://7rikazhexde-test-website-docusaurus.netlify.app/docs/about"
+                ? "https://test-website-docusaurus.netlify.app/docs/about"
                 : "https://7rikazhexde.github.io/test-website-docusaurus/docs/about"
             }
             style={linkStyle}
@@ -121,7 +126,7 @@ export default function Layout(props) {
       const cookieValue = Cookies.get("docusaurus-gdpr-google-analytics");
       if (cookieValue === "true") {
         const script = document.createElement("script");
-        script.src = `https://www.googletagmanager.com/gtag/js?id=G-QH99K0ZNM4`;
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
         script.async = true;
         document.head.appendChild(script);
 
@@ -130,12 +135,12 @@ export default function Layout(props) {
           window.dataLayer.push(arguments);
         }
         gtag("js", new Date());
-        gtag("config", "G-QH99K0ZNM4", { anonymize_ip: true });
+        gtag("config", trackingId, { anonymize_ip: true });
         gtag("set", "page_path", location.pathname);
         gtag("event", "page_view");
       }
     }
-  }, [location.pathname]);
+  }, [location.pathname, trackingId]);
 
   return (
     <>
